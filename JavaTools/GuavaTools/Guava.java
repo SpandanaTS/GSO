@@ -11,6 +11,35 @@ public class Guava {
          */
     }
 
+    public void upHorizontalPyramidNumber(int n){
+        
+        /*UP to Down */
+        int num=1;
+        for(int i = 0 ; i< n ; i++){
+            for(int j=0 ; j<=i ; j++){
+                System.out.print(num);
+                if(j<i)
+                System.out.print("*");
+                num++;
+            }
+            System.out.println("");
+        }
+
+        /*Down to UP */
+        int temp;
+        for(int i=n;i>=1;i--){
+            temp=num-i;
+            num=temp;
+            for(int j=1; j<=i ; j++){
+                System.out.print(temp);
+                if(j<i)
+                System.out.print("*");
+                temp++;
+            }
+            System.out.println("");
+        }
+    }
+
     public boolean[] allPrimeTillN(int n) {
 
         //SieveOfEratosthenes
